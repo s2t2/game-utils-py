@@ -1,6 +1,7 @@
 
 # Rock Paper Scissors Gameplay Logic (Python)
 
+[![Build Status](https://travis-ci.com/s2t2/game-utils-py.svg?branch=master)](https://travis-ci.com/s2t2/game-utils-py)
 
 ## Installation
 
