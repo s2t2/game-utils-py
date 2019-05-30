@@ -30,4 +30,12 @@ pip install -e path/to/game-utils-py/
 from game_utils.rock_paper_scissors import *
 
 print(WELCOME_MESSAGE) #> Hi. Welcome to my Rock-Paper-Scissors game!
+
+determine_winner("rock", "paper") #> "paper"
 ```
+
+## [Contributing](/CONTRIBUTING.md)
+
+## [Releasing](/RELEASING.md)
+
+## [License](/LICENSE.md)
