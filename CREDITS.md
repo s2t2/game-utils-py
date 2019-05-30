@@ -19,6 +19,8 @@
   + https://pypi.org/search/
   + https://twine.readthedocs.io/en/latest/
   + https://packaging.python.org/guides/distributing-packages-using-setuptools/
+  + https://stackoverflow.com/a/52130985/670433
+  + https://packaging.python.org/guides/using-testpypi/#setting-up-testpypi-in-pypirc
 
 ## Setup Tools
 
