@@ -1,9 +1,10 @@
-from distutils.core import setup
+
+import setuptools
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-setup(
+setuptools.setup(
     name="s2t2-game-utils",
     version="0.8",
     author="MJ Rossetti",
@@ -13,5 +14,5 @@ setup(
     license="MIT",
     url="https://github.com/s2t2/game-utils",
     #packages=["game_utils"]
-    setuptools.find_packages()
+    packages=setuptools.find_packages()
 )

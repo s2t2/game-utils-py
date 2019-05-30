@@ -19,9 +19,19 @@
   + https://pypi.org/search/
   + https://twine.readthedocs.io/en/latest/
 
+## Setup Tools
+
+  + https://stackoverflow.com/questions/6344076/differences-between-distribute-distutils-setuptools-and-distutils2/14753678
+  + https://setuptools.readthedocs.io/en/latest/setuptools.html#basic-use
 
 
+<hr>
 
+```sh
+conda create -n twine-env python=3.7
+conda activate twine-env
+pip install twine
+```
 
 Generating distribution files (building the package):
 
