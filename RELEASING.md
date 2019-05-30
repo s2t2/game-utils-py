@@ -2,6 +2,9 @@
 
 ### Prerequisites
 
+  + Sign up for a [PyPI Account](https://pypi.org)
+  + Sign up for a [PyPI Test Server Account](https://test.pypi.org)
+
 ### Setup
 
 Create and activate a virtual environment from which to issue twine commands:
@@ -40,42 +43,5 @@ twine upload --skip-existing --repository-url https://test.pypi.org/legacy/ dist
 Finally, if everything looks good, release to PyPI:
 
 ```sh
-twine upload dist/*
-```
-
-<hr>
-
-## Verifying Ability to Install
-
-Choose one of the following installation commands, as desired:
-
-```sh
-# from PyPI:
-pip install s2t2-game-utils
-
-# from PyPI Test server:
-pip install -i https://test.pypi.org/simple/ s2t2-game-utils
-
-# from GitHub source (HTTPS version):
-pip install git+https://github.com/s2t2/game-utils-py.git
-
-# from GitHub source (SSH version):
-pip install git+ssh://git@github.com/s2t2/game-utils-py.git
-
-# from local source (after downloading the repo):
-pip install -e path/to/game-utils-py/
-```
-
-After installing, should be able to:
-
-```py
-from game_utils import *
-
-print(INIT_MESSAGE) #> Initializing...
-```
-
-```py
-from game_utils.rock_paper_scissors import *
-
-print(WELCOME_MESSAGE) #> Hi. Welcome to my Rock-Paper-Scissors game!
+twine upload --skip-existing dist/*
 ```
