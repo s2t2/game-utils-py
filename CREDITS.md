@@ -18,6 +18,7 @@
   + https://realpython.com/pypi-publish-python-package/
   + https://pypi.org/search/
   + https://twine.readthedocs.io/en/latest/
+  + https://packaging.python.org/guides/distributing-packages-using-setuptools/
 
 ## Setup Tools
 
@@ -76,4 +77,13 @@ If there is an error in the distribution, need to re-generate it and re-check it
 
 ```sh
 twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+#> Enter your username: s2t2
+#> Enter your password:
+#> Uploading distributions to https://test.pypi.org/legacy/
+#> Uploading s2t2_game_utils-0.8-py3-none-any.whl
+#> 100%|███████████████████████████████████████████████████████████████████| #> 6.55k/6.55k [00:00<00:00, 40.9kB/s]
+#> Uploading s2t2-game-utils-0.8.tar.gz
+#> 100%|███████████████████████████████████████████████████████████████████| #> 5.14k/5.14k [00:01<00:00, 4.71kB/s]
 ```
+
+This creates / updates https://test.pypi.org/project/s2t2-game-utils/.
