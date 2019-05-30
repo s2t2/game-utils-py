@@ -1,5 +1,9 @@
 ## Build and Release Process
 
+### Prerequisites
+
+### Setup
+
 Create and activate a virtual environment from which to issue twine commands:
 
 ```sh
@@ -8,6 +12,8 @@ conda activate twine-env
 
 pip install twine
 ```
+
+### Building
 
 Generate / build package distribution files:
 
@@ -23,10 +29,12 @@ twine check dist/*
 
 If there is an error in the distribution, need to re-generate it and re-check it.
 
+### Releasing
+
 Otherwise, push to the PYPI Test Server:
 
 ```sh
-twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+twine upload --skip-existing --repository-url https://test.pypi.org/legacy/ dist/*
 ```
 
 Finally, if everything looks good, release to PyPI:
@@ -34,6 +42,8 @@ Finally, if everything looks good, release to PyPI:
 ```sh
 twine upload dist/*
 ```
+
+<hr>
 
 ## Verifying Ability to Install
 
