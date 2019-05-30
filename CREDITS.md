@@ -23,9 +23,24 @@
 
   + https://stackoverflow.com/questions/6344076/differences-between-distribute-distutils-setuptools-and-distutils2/14753678
   + https://setuptools.readthedocs.io/en/latest/setuptools.html#basic-use
+  + https://github.com/pypa/twine
+  + https://github.com/takluyver/flit
+  + https://github.com/audreyr/cookiecutter
+
+## Documenting
+
+  + https://realpython.com/documenting-python-code/
+
+
+
+
+
+
 
 
 <hr>
+
+## Build and Release Process
 
 ```sh
 conda create -n twine-env python=3.7
@@ -37,15 +52,27 @@ Generating distribution files (building the package):
 
 ```sh
 python setup.py sdist bdist_wheel
+#> ...
+#> adding 'game_utils/__init__.py'
+#> adding 'game_utils/rock_paper_scissors.py'
+#> adding 's2t2_game_utils-0.8.dist-info/LICENSE.md'
+#> adding 's2t2_game_utils-0.8.dist-info/METADATA'
+#> adding 's2t2_game_utils-0.8.dist-info/WHEEL'
+#> adding 's2t2_game_utils-0.8.dist-info/top_level.txt'
+#> adding 's2t2_game_utils-0.8.dist-info/RECORD'
 ```
 
-Checking the distrubution:
+Checking the distribution:
 
 ```sh
 twine check dist/*
+#> Checking distribution dist/s2t2_game_utils-0.8-py3-none-any.whl: Passed
+#> Checking distribution dist/s2t2-game-utils-0.8.tar.gz: Passed
 ```
 
-Pushing distribution to PYPI:
+Push to GitHub.
+
+If there is an error in the distribution, need to re-generate it and re-check it. Otherwise, try pushing to PYPI Test Server:
 
 ```sh
 twine upload --repository-url https://test.pypi.org/legacy/ dist/*
