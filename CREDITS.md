@@ -5,6 +5,8 @@
   + https://stackoverflow.com/a/20043907/670433
   + https://github.com/github/gitignore/blob/master/Python.gitignore
   + https://fernandofreitasalves.com/pip-installing-package-from-private-repository/
+  + https://github.com/s2t2/rock-paper-scissors-inclass/blob/master/game.py
+  + http://data-creative.info/reference-docs/2019/05/30/how-to-publish-python-package-pypi/
 
 ## PYPI
 
