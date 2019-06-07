@@ -20,20 +20,26 @@ def determine_winner(choice1, choice2):
     Example: determine_winner("rock", "paper")
     """
 
-    if choice1 == choice2:
-        winner = None # the outcome is a tie
-    else:
-        choices = [choice1, choice2]
-        choices.sort() # FYI: this is mutating
+    winners = {
+        "rock":{
+            "rock": None, # represents a tie
+            "paper": "paper",
+            "scissors": "rock",
+        },
+        "paper":{
+            "rock": "paper",
+            "paper": None, # represents a tie
+            "scissors": "scissors",
+        },
+        "scissors":{
+            "rock": "rock",
+            "paper": "scissors",
+            "scissors": None, # represents a tie
+        },
+    }
 
-        if choices == ["paper", "rock"]:
-            winner = "paper"
-        elif choices == ["paper", "scissors"]:
-            winner = "scissors"
-        elif choices == ["rock", "scissors"]:
-            winner = "rock"
-        else:
-            raise ValueError("OOPS, SOMETHING WENT WRONG")
+    # todo: handle keyerror
+    winner = winners[choice1][choice2]
 
     return winner
 
