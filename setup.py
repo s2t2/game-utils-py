@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="s2t2-game-utils",
-    version="1.0",
+    version="1.2",
     author="MJ Rossetti",
     author_email="datacreativellc@gmail.com",
     description="Gameplay logic for Rock-Paper-Scissors",
